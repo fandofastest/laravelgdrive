@@ -92,6 +92,9 @@ Route::get('get', function() {
         ->header('Content-Disposition', "attachment; filename='$filename'");
 });
 
+
+Route::get('/getbyid/{iddrive}', 'Drivecontroller@index')->name('home');
+
 Route::get('put-get-stream', function() {
     // Use a stream to upload and download larger files
     // to avoid exceeding PHP's memory limit.
